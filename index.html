@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matvey Smirnov - Frontend Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <span>MS</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Matvey Smirnov</h1>
+                <p class="hero-subtitle">Frontend Developer / Beginner C# Developer</p>
+                <p class="hero-description">
+                    I create modern and responsive web applications. Currently learning C# and expanding my skills in full-stack development.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">My Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="hero.jpg" alt="Matvey Smirnov" class="profile-image">
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend & Tools</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="45"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>TypeScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="30"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Backend & Databases</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>C#</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="2"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>.NET</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="2"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="15"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Projects Section -->
+    <section id="projects" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="health">Health & Fitness</button>
+                <button class="filter-btn" data-filter="tool">Tools</button>
+                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Task Tracker -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <div class="project-placeholder task-tracker">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Task Tracker</h3>
+                        <p>Task management tool for tracking task status, assigning executors, and attaching files. Features intuitive interface and efficient workflow organization.</p>
+                        <div class="portfolio-tech">
+                            <span>React</span>
+                            <span>JavaScript</span>
+                            <span>CSS3</span>
+                            <span>UI/UX</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/Disketion/Task-Tracker" class="portfolio-link" target="_blank">GitHub</a>
+                            <a href="#" class="portfolio-link">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CaloTrack -->
+                <div class="portfolio-item" data-category="health">
+                    <div class="portfolio-image">
+                        <div class="project-placeholder calotrack">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>CaloTrack</h3>
+                        <p>Web application for health monitoring and diet tracking. Helps users understand calorie intake and nutrient consumption with user-friendly interface.</p>
+                        <div class="portfolio-tech">
+                            <span>JavaScript</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Nutrition API</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/Disketion/CaloTrack" class="portfolio-link" target="_blank">GitHub</a>
+                            <a href="#" class="portfolio-link">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Trigger Bot -->
+                <div class="portfolio-item" data-category="tool">
+                    <div class="portfolio-image">
+                        <div class="project-placeholder trigger">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Valorant Trigger Bot</h3>
+                        <p>Auto-aim and auto-click bot for Valorant using Autohotkey. Pixel color detection technology. For educational purposes only.</p>
+                        <div class="portfolio-tech">
+                            <span>AutoHotkey</span>
+                            <span>Automation</span>
+                            <span>Pixel Detection</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/Disketion/Trigger" class="portfolio-link" target="_blank">GitHub</a>
+                            <a href="#" class="portfolio-link">Documentation</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Shop -->
+                <div class="portfolio-item" data-category="ecommerce">
+                    <div class="portfolio-image">
+                        <div class="project-placeholder shop">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>E-commerce Shop</h3>
+                        <p>Online store platform with product catalog, shopping cart, and user authentication. Modern design with responsive layout.</p>
+                        <div class="portfolio-tech">
+                            <span>JavaScript</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>E-commerce</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/Disketion/Shop" class="portfolio-link" target="_blank">GitHub</a>
+                            <a href="#" class="portfolio-link">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CSS  -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <div class="project-placeholder css">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Portfolio</h3>
+                        <p>This is my web portfolio. I aimed to create a professional resource reflecting my skills, experience, and achievements. You can go to my GitHub by clicking on the corresponding link. Your opinion is very important to me. Share what you like on this resource and what can be improved. Also tell us what goals you set for your portfolio. This will help me adapt it to your needs.</p>
+                        <div class="portfolio-tech">
+                            <span>CSS3</span>
+                            <span>Animations</span>
+                            <span>Flexbox/Grid</span>
+                            <span>Responsive</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/Disketion" class="portfolio-link" target="_blank">GitHub</a>
+                            <a href="#" class="portfolio-link">View Projects</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>Disketion-partner@yandex.ru</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Cherepovets, Russia</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <h3>Education</h3>
+                            <p>Cherepovets Chemical Technology College</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-telegram"></i>
+                        <div>
+                            <h3>Telegram</h3>
+                            <p>@Reshapiz</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formspree Contact Form -->
+                <form class="contact-form" action="https://formspree.io/f/xpwyrelq" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="btn-text">Send Message</span>
+                        <div class="btn-loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i> Sending...
+                        </div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="waves">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+            <div class="wave wave4"></div>
+        </div>
+        
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul class="socials">
+                    <li><a href="https://github.com/Disketion" target="_blank" class="fab fa-github"></a></li>
+                    <li><a href="https://t.me/Reshapiz" target="_blank" class="fab fa-telegram"></a></li>
+                    <li><a href="mailto:Disketion-partner@yandex.ru" class="fas fa-envelope"></a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-info-footer">
+                    <p><i class="fas fa-envelope"></i> Disketion-partner@yandex.ru</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Cherepovets, Russia</p>
+                    <p><i class="fab fa-telegram"></i> @Reshapiz</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 Matvey Smirnov. All rights reserved.</p>
+            <p class="credit">Portfolio</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
