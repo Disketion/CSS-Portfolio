@@ -328,12 +328,20 @@ section {
 .skill-progress[data-level="85"] { width: 85%; background: var(--gradient); }
 .skill-progress[data-level="80"] { width: 80%; background: var(--gradient); }
 .skill-progress[data-level="45"] { width: 45%; background: linear-gradient(45deg, #4ecdc4, #00d2ff); }
-.skill-progress[data-level="30"] { width: 30%; background: linear-gradient(45deg, #4ecdc4, #00d2ff); }
-.skill-progress[data-level="15"] { width: 15%; background: linear-gradient(45deg, #ffa500, #ffd93d); }
+.skill-progress[data-level="30"] { width: 30%; background: linear-gradient(45deg, #fbff00, #00d2ff); }
+.skill-progress[data-level="15"] { width: 15%; background: linear-gradient(45deg, #ff5100, #ffd93d); }
 .skill-progress[data-level="2"] { 
     width: 2%; 
     min-width: 10px;
-    background: linear-gradient(45deg, #ff6b6b, #ffa500);
+    background: linear-gradient(45deg, #ff0000, #ffa600);
+}
+.skill-progress[data-level="40"] { width: 40%; background: linear-gradient(45deg, #ffa500, #4ecdc4); }
+.skill-progress[data-level="50"] { width: 50%; background: linear-gradient(45deg, #ffd93d, #4ecdc4); }
+.skill-progress[data-level="60"] { width: 60%; background: linear-gradient(45deg, #3dfff5, #4ecdc4); }
+.skill-progress[data-level="10"] { width: 10%; background: linear-gradient(45deg, #ff8b3d, #cdab4e); }
+/* Portfolio Section */
+.portfolio {
+    background: var(--bg-primary);
 }
 
 /* Portfolio Section */
@@ -965,4 +973,5 @@ footer {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-color);
+
 }
