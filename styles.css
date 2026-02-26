@@ -975,3 +975,75 @@ footer {
     background: var(--secondary-color);
 
 }
+
+/* Disabled project state */
+.portfolio-item.disabled-project {
+    position: relative;
+    filter: grayscale(0.8) brightness(0.6);
+    opacity: 0.85;
+    transition: all 0.3s ease;
+    pointer-events: auto; /* Оставляем элементы интерактивными */
+}
+
+.portfolio-item.disabled-project:hover {
+    filter: grayscale(0.6) brightness(0.7);
+    opacity: 0.95;
+    transform: translateY(-5px);
+}
+
+.portfolio-item.disabled-project .portfolio-links {
+    pointer-events: auto; /* Гарантируем, что кнопки остаются кликабельными */
+}
+
+.portfolio-item.disabled-project .portfolio-links a {
+    position: relative;
+    z-index: 5;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    backdrop-filter: blur(4px);
+}
+
+.portfolio-item.disabled-project .portfolio-links a:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.portfolio-item.disabled-project .disabled-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    pointer-events: none; /* Позволяет кликать сквозь оверлей на кнопки */
+}
+
+.portfolio-item.disabled-project .disabled-badge {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    color: #ffaa00;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(255, 170, 0, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    animation: pulse-badge 2s infinite;
+}
+
+@keyframes pulse-badge {
+    0%, 100% { opacity: 0.9; }
+    50% { opacity: 1; background: rgba(20, 20, 20, 0.8); }
+}
+
+/* Для мобильных устройств - чуть меньше бейдж */
+@media (max-width: 768px) {
+    .portfolio-item.disabled-project .disabled-badge {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+}
+
