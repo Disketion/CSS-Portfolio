@@ -1,5 +1,19 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
+const mobileWarning = document.getElementById('mobileWarning');
+const mobileWarningContinue = mobileWarning?.querySelector('.mobile-warning__continue');
+
+if (mobileWarning && mobileWarningContinue) {
+    mobileWarning.classList.remove('is-hidden');
+    mobileWarning.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('mobile-warning-open');
+
+    mobileWarningContinue.addEventListener('click', () => {
+        mobileWarning.classList.add('is-hidden');
+        mobileWarning.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('mobile-warning-open');
+    });
+}
 
 if (menuToggle && nav) {
     menuToggle.addEventListener("click", () => {
