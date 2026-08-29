@@ -1,19 +1,39 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
-const mobileWarning = document.getElementById('mobileWarning');
-const mobileWarningContinue = mobileWarning?.querySelector('.mobile-warning__continue');
+const mobileWarning = document.getElementById("mobileWarning");
+const mobileWarningContinue = mobileWarning?.querySelector(".mobile-warning__continue");
 
-if (mobileWarning && mobileWarningContinue) {
-    mobileWarning.classList.remove('is-hidden');
-    mobileWarning.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('mobile-warning-open');
+function updateMobileWarning() {
+    if (!mobileWarning) {
+        return;
+    }
 
-    mobileWarningContinue.addEventListener('click', () => {
-        mobileWarning.classList.add('is-hidden');
-        mobileWarning.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('mobile-warning-open');
-    });
+    const isMobile = window.matchMedia("(max-width: 700px)").matches;
+
+    if (!isMobile) {
+        mobileWarning.classList.add("is-hidden");
+        mobileWarning.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("mobile-warning-open");
+        return;
+    }
+
+    if (!mobileWarning.classList.contains("mobile-warning-dismissed")) {
+        mobileWarning.classList.remove("is-hidden");
+        mobileWarning.setAttribute("aria-hidden", "false");
+        document.body.classList.add("mobile-warning-open");
+    }
 }
+
+mobileWarningContinue?.addEventListener("click", () => {
+    mobileWarning.classList.add("is-hidden");
+    mobileWarning.classList.add("mobile-warning-dismissed");
+    mobileWarning.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("mobile-warning-open");
+});
+
+updateMobileWarning();
+
+window.addEventListener("resize", updateMobileWarning);
 
 if (menuToggle && nav) {
     menuToggle.addEventListener("click", () => {
