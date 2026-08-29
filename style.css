@@ -1501,3 +1501,240 @@ button {
         font-size: 10px;
     }
 }
+@media (max-width: 700px) {
+    .hero {
+        overflow: hidden;
+    }
+
+    .hero .sticker--rocket {
+        width: 42px;
+        height: 42px;
+        right: 8px;
+        top: 14%;
+        font-size: 18px;
+        z-index: 1;
+    }
+
+    .hero .sticker--coin {
+        width: 38px;
+        height: 38px;
+        left: 8px;
+        top: 17%;
+        font-size: 16px;
+        z-index: 1;
+    }
+
+    .hero .sticker--code {
+        width: 54px;
+        height: 34px;
+        left: 8px;
+        bottom: 8%;
+        font-size: 11px;
+        z-index: 1;
+    }
+
+    .hero__sticker {
+        width: 58px;
+        height: 58px;
+        right: 8px;
+        bottom: 5%;
+        padding: 7px;
+        z-index: 1;
+    }
+
+    .hero__sticker strong {
+        font-size: 13px;
+    }
+
+    .hero__sticker span {
+        font-size: 7px;
+    }
+
+    .hero__content {
+        position: relative;
+        z-index: 5;
+    }
+
+    .section--white,
+    .section--gray,
+    .section--sky,
+    .section--black {
+        overflow: hidden;
+    }
+
+    .section > .sticker {
+        z-index: 1;
+    }
+
+    .section > .ribbon {
+        z-index: 0;
+    }
+
+    .section > .section-label,
+    .section > .about-grid,
+    .section > .stack-intro,
+    .section > .stack-cloud,
+    .section > .timeline,
+    .section > .projects,
+    .section > .direction-content,
+    .section > .contact-copy,
+    .section > .contact-actions {
+        position: relative;
+        z-index: 5;
+    }
+}
+.mobile-warning {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .mobile-warning {
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .mobile-warning.is-hidden {
+        display: none;
+    }
+
+    .mobile-warning__backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, .72);
+    }
+
+    .mobile-warning__window {
+        position: relative;
+        z-index: 1;
+        width: min(420px, 100%);
+        padding: 26px;
+        border: 1px solid var(--carbon);
+        border-radius: 30px;
+        background: var(--white);
+    }
+
+    .mobile-warning__label {
+        display: block;
+        margin-bottom: 14px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: .08em;
+    }
+
+    .mobile-warning__window h2 {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: clamp(46px, 15vw, 72px);
+        line-height: .8;
+    }
+
+    .mobile-warning__window p {
+        margin: 22px 0 0;
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
+    .mobile-warning__continue {
+        width: 100%;
+        margin-top: 24px;
+    }
+}
+
+@media (min-width: 701px) {
+    .mobile-warning {
+        display: none !important;
+    }
+}
+body.mobile-warning-open {
+    overflow: hidden;
+}
+@media (max-width: 700px) {
+    .modal {
+        padding: 8px;
+    }
+
+    .modal__window {
+        width: 100%;
+        height: calc(100svh - 16px);
+        max-height: calc(100svh - 16px);
+        border-radius: 22px;
+    }
+
+    .modal__header {
+        min-height: 64px;
+        padding: 12px 14px;
+    }
+
+    .modal__header h2 {
+        margin-top: 4px;
+        font-size: 38px;
+        line-height: .78;
+    }
+
+    .modal__eyebrow {
+        font-size: 8px;
+    }
+
+    .modal__close {
+        width: 38px;
+        height: 38px;
+        flex: 0 0 38px;
+        font-size: 22px;
+    }
+
+    .modal__content {
+        min-height: 0;
+        flex: 1;
+    }
+
+    .modal__intro {
+        display: none;
+    }
+
+    .nearby-preview {
+        min-height: 0;
+        flex: 1;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .nearby-preview iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .modal {
+        padding: 5px;
+    }
+
+    .modal__window {
+        height: calc(100svh - 10px);
+        max-height: calc(100svh - 10px);
+        border-radius: 18px;
+    }
+
+    .modal__header {
+        min-height: 58px;
+        padding: 10px 12px;
+    }
+
+    .modal__header h2 {
+        font-size: 32px;
+    }
+
+    .modal__close {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+        font-size: 20px;
+    }
+}
